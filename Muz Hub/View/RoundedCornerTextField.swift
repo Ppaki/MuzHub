@@ -9,6 +9,15 @@
 import UIKit
 
 class RoundedCornerTextField: UITextField {
+    
+    override func awakeFromNib() {
+        setupView()
+    }
+    
+    func setupView() {
+        self.layer.cornerRadius = self.frame.height / 2
+    }
+    
 
     /*
     // Only override draw() if you perform custom drawing.

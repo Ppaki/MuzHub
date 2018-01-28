@@ -7,10 +7,11 @@
 //
 
 import UIKit
-import FirebaseAuth
 
-class HomeViewController: UIViewController {
+class HomeVC: UIViewController {
 
+    var delegate: CenterVCDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,7 +23,10 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func menuButtonPressed(_ sender: UIButton) {
+        delegate?.toggleLeftPanel()
+    }
+    
     /*
     // MARK: - Navigation
 

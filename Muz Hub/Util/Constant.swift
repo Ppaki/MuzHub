@@ -8,4 +8,4 @@
 
 import Foundation
 
-public typealias DownloadCompleted = (_ response: String) -> ()
+public typealias DownloadCompleted = () -> ()

@@ -7,29 +7,41 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class LoginVC: UIViewController {
-
+    
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func loginButtonWasPressed(_ sender: UIButton) {
+        Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
+            if error == nil {
+                self.dismiss(animated: true, completion: nil)
+            } else {
+                print(error! as NSError)
+            }
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func registerButtonWasPressed(_ sender: UIButton) {
+        Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
+            if error != nil {
+            } else {
+                print(error as! String)
+            }
+        }
     }
-    */
-
+    
+    @IBAction func cancelButtonWasPressed(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+        
+    }
+    
 }

@@ -7,13 +7,25 @@
 //
 
 import UIKit
+import MapKit
+import CoreLocation
 
-class MapVC: UIViewController {
+class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
+    var locationManager: CLLocationManager?
+    @IBOutlet weak var mapView: MKMapView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        
+        mapView.delegate = self
+        locationManager = CLLocationManager()
+        locationManager?.delegate = self
+        locationManager?.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager?.requestWhenInUseAuthorization()
+        locationManager?.startUpdatingLocation()
+        mapView.showsUserLocation = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,6 +33,14 @@ class MapVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location = locations.last
+        
+        let center = CLLocationCoordinate2D(latitude: (location?.coordinate.latitude)!, longitude: (location?.coordinate.longitude)!)
+        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+        
+        self.mapView.setRegion(region, animated: true)
+    }
 
     /*
     // MARK: - Navigation

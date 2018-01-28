@@ -7,13 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A300AD191FBE991B004E6E7D /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A300AD181FBE991B004E6E7D /* Constant.swift */; };
+		A31C62EA1FD516D80014253D /* InstitutionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31C62E91FD516D80014253D /* InstitutionVC.swift */; };
+		A328C4801FAB97A0002B952B /* PostCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A328C47F1FAB97A0002B952B /* PostCollectionCell.swift */; };
+		A328C4821FAB9EDE002B952B /* InstitutionCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A328C4811FAB9EDE002B952B /* InstitutionCollectionCell.swift */; };
 		A32FB2FC1FA6ADC200ABBE05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32FB2FB1FA6ADC200ABBE05 /* AppDelegate.swift */; };
-		A32FB2FE1FA6ADC200ABBE05 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32FB2FD1FA6ADC200ABBE05 /* ViewController.swift */; };
 		A32FB3011FA6ADC200ABBE05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A32FB2FF1FA6ADC200ABBE05 /* Main.storyboard */; };
 		A32FB3031FA6ADC200ABBE05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A32FB3021FA6ADC200ABBE05 /* Assets.xcassets */; };
 		A32FB3061FA6ADC200ABBE05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A32FB3041FA6ADC200ABBE05 /* LaunchScreen.storyboard */; };
 		A32FB3111FA6ADC200ABBE05 /* Muz_HubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32FB3101FA6ADC200ABBE05 /* Muz_HubTests.swift */; };
 		A32FB31C1FA6ADC200ABBE05 /* Muz_HubUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32FB31B1FA6ADC200ABBE05 /* Muz_HubUITests.swift */; };
+		A32FB32A1FA6AE0600ABBE05 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A32FB3291FA6AE0600ABBE05 /* Podfile */; };
+		A32FB32C1FA6AEFF00ABBE05 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A32FB32B1FA6AEFF00ABBE05 /* GoogleService-Info.plist */; };
+		A33777551FB6AC4F0097EE8B /* ContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33777541FB6AC4F0097EE8B /* ContainerVC.swift */; };
+		A33777581FB6B3800097EE8B /* CenterVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33777571FB6B3800097EE8B /* CenterVCDelegate.swift */; };
+		A33A32D01FB93768003518FF /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33A32CF1FB93768003518FF /* MenuVC.swift */; };
+		A33A32D41FB948D4003518FF /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33A32D31FB948D4003518FF /* ProfileVC.swift */; };
+		A34987C81FB951C5001F2A64 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34987C71FB951C5001F2A64 /* LoginVC.swift */; };
+		A3550C2A1FA6C1F8001C71CC /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3550C291FA6C1F8001C71CC /* HomeVC.swift */; };
+		A3795EB81FBD484700D1CA93 /* RoundedCornerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3795EB71FBD484700D1CA93 /* RoundedCornerTextField.swift */; };
+		A3822EE4201E570B00A745D3 /* RoundedCornerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3822EE3201E570B00A745D3 /* RoundedCornerButton.swift */; };
+		A393A03F1FA6E2CE008D597D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A393A03E1FA6E2CE008D597D /* User.swift */; };
+		A393A0411FA6E425008D597D /* Institution.swift in Sources */ = {isa = PBXBuildFile; fileRef = A393A0401FA6E425008D597D /* Institution.swift */; };
+		A393A0431FA6E6CE008D597D /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = A393A0421FA6E6CE008D597D /* Post.swift */; };
+		A39B92E21FBE8E6900C5962F /* FIrebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39B92E11FBE8E6900C5962F /* FIrebaseService.swift */; };
+		A3A4529D2003225200EF1088 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A4529C2003225200EF1088 /* MapVC.swift */; };
+		EAFC3C39F4EA3BECC02DBEB2 /* Pods_Muz_Hub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C414E16ED574B346901DE7EE /* Pods_Muz_Hub.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +53,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		44307602FDC4FC278B91E5F5 /* Pods-Muz Hub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Muz Hub.release.xcconfig"; path = "Pods/Target Support Files/Pods-Muz Hub/Pods-Muz Hub.release.xcconfig"; sourceTree = "<group>"; };
+		A300AD181FBE991B004E6E7D /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		A31C62E91FD516D80014253D /* InstitutionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstitutionVC.swift; sourceTree = "<group>"; };
+		A328C47F1FAB97A0002B952B /* PostCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionCell.swift; sourceTree = "<group>"; };
+		A328C4811FAB9EDE002B952B /* InstitutionCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstitutionCollectionCell.swift; sourceTree = "<group>"; };
 		A32FB2F81FA6ADC200ABBE05 /* Muz Hub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Muz Hub.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A32FB2FB1FA6ADC200ABBE05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A32FB2FD1FA6ADC200ABBE05 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A32FB3001FA6ADC200ABBE05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A32FB3021FA6ADC200ABBE05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A32FB3051FA6ADC200ABBE05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +70,23 @@
 		A32FB3171FA6ADC200ABBE05 /* Muz HubUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Muz HubUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A32FB31B1FA6ADC200ABBE05 /* Muz_HubUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Muz_HubUITests.swift; sourceTree = "<group>"; };
 		A32FB31D1FA6ADC200ABBE05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A32FB3291FA6AE0600ABBE05 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A32FB32B1FA6AEFF00ABBE05 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A33777541FB6AC4F0097EE8B /* ContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerVC.swift; sourceTree = "<group>"; };
+		A33777571FB6B3800097EE8B /* CenterVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterVCDelegate.swift; sourceTree = "<group>"; };
+		A33A32CF1FB93768003518FF /* MenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
+		A33A32D31FB948D4003518FF /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		A34987C71FB951C5001F2A64 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		A3550C291FA6C1F8001C71CC /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		A3795EB71FBD484700D1CA93 /* RoundedCornerTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerTextField.swift; sourceTree = "<group>"; };
+		A3822EE3201E570B00A745D3 /* RoundedCornerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerButton.swift; sourceTree = "<group>"; };
+		A393A03E1FA6E2CE008D597D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A393A0401FA6E425008D597D /* Institution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Institution.swift; sourceTree = "<group>"; };
+		A393A0421FA6E6CE008D597D /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		A39B92E11FBE8E6900C5962F /* FIrebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIrebaseService.swift; sourceTree = "<group>"; };
+		A3A4529C2003225200EF1088 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		C414E16ED574B346901DE7EE /* Pods_Muz_Hub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Muz_Hub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF496D8DBC09B53C5B3747DE /* Pods-Muz Hub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Muz Hub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Muz Hub/Pods-Muz Hub.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAFC3C39F4EA3BECC02DBEB2 /* Pods_Muz_Hub.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +115,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		187BF2C35217A4F0617AF1CD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EF496D8DBC09B53C5B3747DE /* Pods-Muz Hub.debug.xcconfig */,
+				44307602FDC4FC278B91E5F5 /* Pods-Muz Hub.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3A312FC19B5D0D2B0CA11870 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C414E16ED574B346901DE7EE /* Pods_Muz_Hub.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A300AD1A1FBE9981004E6E7D /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				A300AD181FBE991B004E6E7D /* Constant.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		A32FB2EF1FA6ADC200ABBE05 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +147,8 @@
 				A32FB30F1FA6ADC200ABBE05 /* Muz HubTests */,
 				A32FB31A1FA6ADC200ABBE05 /* Muz HubUITests */,
 				A32FB2F91FA6ADC200ABBE05 /* Products */,
+				187BF2C35217A4F0617AF1CD /* Pods */,
+				3A312FC19B5D0D2B0CA11870 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,11 +165,17 @@
 		A32FB2FA1FA6ADC200ABBE05 /* Muz Hub */ = {
 			isa = PBXGroup;
 			children = (
+				A300AD1A1FBE9981004E6E7D /* Util */,
+				A33777561FB6B30E0097EE8B /* Protocols */,
+				A3CA55FB1FA6B60300F89088 /* Controller */,
+				A3CA55FA1FA6B5FE00F89088 /* View */,
+				A3CA55F91FA6B5F500F89088 /* Model */,
+				A32FB3291FA6AE0600ABBE05 /* Podfile */,
 				A32FB2FB1FA6ADC200ABBE05 /* AppDelegate.swift */,
-				A32FB2FD1FA6ADC200ABBE05 /* ViewController.swift */,
 				A32FB2FF1FA6ADC200ABBE05 /* Main.storyboard */,
 				A32FB3021FA6ADC200ABBE05 /* Assets.xcassets */,
 				A32FB3041FA6ADC200ABBE05 /* LaunchScreen.storyboard */,
+				A32FB32B1FA6AEFF00ABBE05 /* GoogleService-Info.plist */,
 				A32FB3071FA6ADC200ABBE05 /* Info.plist */,
 			);
 			path = "Muz Hub";
@@ -125,6 +199,50 @@
 			path = "Muz HubUITests";
 			sourceTree = "<group>";
 		};
+		A33777561FB6B30E0097EE8B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A33777571FB6B3800097EE8B /* CenterVCDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		A3CA55F91FA6B5F500F89088 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A393A03E1FA6E2CE008D597D /* User.swift */,
+				A393A0401FA6E425008D597D /* Institution.swift */,
+				A393A0421FA6E6CE008D597D /* Post.swift */,
+				A39B92E11FBE8E6900C5962F /* FIrebaseService.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A3CA55FA1FA6B5FE00F89088 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A328C47F1FAB97A0002B952B /* PostCollectionCell.swift */,
+				A328C4811FAB9EDE002B952B /* InstitutionCollectionCell.swift */,
+				A3795EB71FBD484700D1CA93 /* RoundedCornerTextField.swift */,
+				A3822EE3201E570B00A745D3 /* RoundedCornerButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A3CA55FB1FA6B60300F89088 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A3550C291FA6C1F8001C71CC /* HomeVC.swift */,
+				A33777541FB6AC4F0097EE8B /* ContainerVC.swift */,
+				A33A32CF1FB93768003518FF /* MenuVC.swift */,
+				A33A32D31FB948D4003518FF /* ProfileVC.swift */,
+				A34987C71FB951C5001F2A64 /* LoginVC.swift */,
+				A31C62E91FD516D80014253D /* InstitutionVC.swift */,
+				A3A4529C2003225200EF1088 /* MapVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +250,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A32FB3201FA6ADC200ABBE05 /* Build configuration list for PBXNativeTarget "Muz Hub" */;
 			buildPhases = (
+				5803A1042C8AF99D7F4AEC3F /* [CP] Check Pods Manifest.lock */,
 				A32FB2F41FA6ADC200ABBE05 /* Sources */,
 				A32FB2F51FA6ADC200ABBE05 /* Frameworks */,
 				A32FB2F61FA6ADC200ABBE05 /* Resources */,
+				3A49F209BFC4C7C715A957DA /* [CP] Embed Pods Frameworks */,
+				2E42707FEB6F38A8D37640EA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -234,6 +355,8 @@
 			files = (
 				A32FB3061FA6ADC200ABBE05 /* LaunchScreen.storyboard in Resources */,
 				A32FB3031FA6ADC200ABBE05 /* Assets.xcassets in Resources */,
+				A32FB32C1FA6AEFF00ABBE05 /* GoogleService-Info.plist in Resources */,
+				A32FB32A1FA6AE0600ABBE05 /* Podfile in Resources */,
 				A32FB3011FA6ADC200ABBE05 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,13 +377,77 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2E42707FEB6F38A8D37640EA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Muz Hub/Pods-Muz Hub-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3A49F209BFC4C7C715A957DA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Muz Hub/Pods-Muz Hub-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5803A1042C8AF99D7F4AEC3F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A32FB2F41FA6ADC200ABBE05 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A32FB2FE1FA6ADC200ABBE05 /* ViewController.swift in Sources */,
+				A33777581FB6B3800097EE8B /* CenterVCDelegate.swift in Sources */,
+				A31C62EA1FD516D80014253D /* InstitutionVC.swift in Sources */,
+				A393A03F1FA6E2CE008D597D /* User.swift in Sources */,
+				A300AD191FBE991B004E6E7D /* Constant.swift in Sources */,
+				A34987C81FB951C5001F2A64 /* LoginVC.swift in Sources */,
+				A33777551FB6AC4F0097EE8B /* ContainerVC.swift in Sources */,
+				A393A0411FA6E425008D597D /* Institution.swift in Sources */,
+				A393A0431FA6E6CE008D597D /* Post.swift in Sources */,
 				A32FB2FC1FA6ADC200ABBE05 /* AppDelegate.swift in Sources */,
+				A33A32D01FB93768003518FF /* MenuVC.swift in Sources */,
+				A3A4529D2003225200EF1088 /* MapVC.swift in Sources */,
+				A328C4801FAB97A0002B952B /* PostCollectionCell.swift in Sources */,
+				A3822EE4201E570B00A745D3 /* RoundedCornerButton.swift in Sources */,
+				A3550C2A1FA6C1F8001C71CC /* HomeVC.swift in Sources */,
+				A3795EB81FBD484700D1CA93 /* RoundedCornerTextField.swift in Sources */,
+				A39B92E21FBE8E6900C5962F /* FIrebaseService.swift in Sources */,
+				A33A32D41FB948D4003518FF /* ProfileVC.swift in Sources */,
+				A328C4821FAB9EDE002B952B /* InstitutionCollectionCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,12 +611,13 @@
 		};
 		A32FB3211FA6ADC200ABBE05 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF496D8DBC09B53C5B3747DE /* Pods-Muz Hub.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Muz Hub/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Broad.Muz-Hub";
+				PRODUCT_BUNDLE_IDENTIFIER = "AqibS.Muz-Hub";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -438,12 +626,13 @@
 		};
 		A32FB3221FA6ADC200ABBE05 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44307602FDC4FC278B91E5F5 /* Pods-Muz Hub.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Muz Hub/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Broad.Muz-Hub";
+				PRODUCT_BUNDLE_IDENTIFIER = "AqibS.Muz-Hub";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

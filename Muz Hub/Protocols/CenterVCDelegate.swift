@@ -6,4 +6,11 @@
 //  Copyright © 2017 Aqib Shehri. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+protocol CenterVCDelegate {
+    func toggleLeftPanel()
+    func addLeftPanelViewController()
+    func animateLeftPanel(shouldExpend: Bool)
+    func changeVC(newController: ShowWhichVC)
+}

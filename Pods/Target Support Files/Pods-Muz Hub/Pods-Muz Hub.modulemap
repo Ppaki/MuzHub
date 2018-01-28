@@ -1,0 +1,6 @@
+framework module Pods_Muz_Hub {
+  umbrella header "Pods-Muz Hub-umbrella.h"
+
+  export *
+  module * { export * }
+}

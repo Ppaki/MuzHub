@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PostCollectionViewCell: UICollectionViewCell {
+class PostCollectionCell: UICollectionViewCell {
     @IBOutlet weak var thumImg: UIImageView!
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var messageLbl: UILabel!
