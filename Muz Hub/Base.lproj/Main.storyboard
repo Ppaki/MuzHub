@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8TF-mX-t8z">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -14,7 +14,7 @@
             <objects>
                 <viewController storyboardIdentifier="LoginVC" id="BYZ-38-t0r" customClass="LoginVC" customModule="Muz_Hub" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TitleBox" translatesAutoresizingMaskIntoConstraints="NO" id="VWh-5l-zMK">
@@ -40,6 +40,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FiV-ht-wUQ" customClass="RoundedCornerButton" customModule="Muz_Hub" customModuleProvider="target">
                                 <rect key="frame" x="112" y="505" width="150" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.98106676339999999" blue="0.57369142770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Sign in"/>
                                 <connections>
@@ -104,14 +105,31 @@
             <objects>
                 <viewController storyboardIdentifier="MapVC" id="e2X-Se-1LS" customClass="MapVC" customModule="Muz_Hub" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UiU-fL-5dk">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TitleBox" translatesAutoresizingMaskIntoConstraints="NO" id="BEk-xe-b7V">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="Km6-Dk-V0X"/>
+                                </constraints>
+                            </imageView>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="RJp-5B-Gcu">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="98" width="375" height="680"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AGY-15-ppi">
+                                <rect key="frame" x="16" y="42" width="30" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancleButtonWasPressed:" destination="Kts-Cv-hRO" eventType="touchUpInside" id="6B2-xD-WbG"/>
+                                    <action selector="cancleButtonWasPressed:" destination="e2X-Se-1LS" eventType="touchUpInside" id="rP6-VA-tFf"/>
+                                </connections>
+                            </button>
                             <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Eg-1l-RBy">
-                                <rect key="frame" x="0.0" y="20" width="375" height="56"/>
+                                <rect key="frame" x="0.0" y="100" width="375" height="56"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -122,9 +140,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="RJp-5B-Gcu" firstAttribute="trailing" secondItem="v39-Fl-d3K" secondAttribute="trailing" id="80s-Kj-yuL"/>
+                            <constraint firstItem="BEk-xe-b7V" firstAttribute="top" secondItem="UiU-fL-5dk" secondAttribute="top" id="AQT-ne-8kd"/>
                             <constraint firstItem="RJp-5B-Gcu" firstAttribute="bottom" secondItem="v39-Fl-d3K" secondAttribute="bottom" id="HN0-6u-EEC"/>
+                            <constraint firstItem="BEk-xe-b7V" firstAttribute="leading" secondItem="v39-Fl-d3K" secondAttribute="leading" id="R74-DF-2gM"/>
+                            <constraint firstItem="BEk-xe-b7V" firstAttribute="trailing" secondItem="v39-Fl-d3K" secondAttribute="trailing" id="SyR-gM-w3i"/>
+                            <constraint firstItem="AGY-15-ppi" firstAttribute="leading" secondItem="v39-Fl-d3K" secondAttribute="leading" constant="16" id="Vg4-vE-Jqn"/>
+                            <constraint firstItem="RJp-5B-Gcu" firstAttribute="top" secondItem="AGY-15-ppi" secondAttribute="bottom" constant="8" id="jWE-7L-N37"/>
+                            <constraint firstItem="AGY-15-ppi" firstAttribute="top" secondItem="UiU-fL-5dk" secondAttribute="top" constant="42" id="sSm-MW-qUw"/>
                             <constraint firstItem="RJp-5B-Gcu" firstAttribute="leading" secondItem="v39-Fl-d3K" secondAttribute="leading" id="wCi-ua-XnI"/>
-                            <constraint firstItem="RJp-5B-Gcu" firstAttribute="top" secondItem="UiU-fL-5dk" secondAttribute="top" id="xRF-8f-IKN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="v39-Fl-d3K"/>
                     </view>
@@ -144,14 +167,14 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="2420" y="-232.53373313343329"/>
+            <point key="canvasLocation" x="2420" y="-232.75862068965517"/>
         </scene>
         <!--ProfileVC-->
         <scene sceneID="OcY-8Y-pNf">
             <objects>
                 <viewController storyboardIdentifier="ProfileVC" id="Kts-Cv-hRO" customClass="ProfileVC" customModule="Muz_Hub" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VT1-Pq-d8R">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TitleBox" translatesAutoresizingMaskIntoConstraints="NO" id="j3P-PO-rVp">
@@ -201,7 +224,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mgz-aU-LuM" id="8Th-ai-F6Y">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -233,15 +256,9 @@
             <objects>
                 <viewController storyboardIdentifier="InstitutionVC" id="zul-Wb-sBJ" customClass="InstitutionVC" customModule="Muz_Hub" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Juq-cp-eLL">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="TitleBox" translatesAutoresizingMaskIntoConstraints="NO" id="nmc-0n-XSE">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="jYj-Vc-Qlc"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WAB-Pd-s1I">
                                 <rect key="frame" x="28" y="50" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -277,7 +294,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="25e-FO-EJe" id="416-Z8-ZC4">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -290,10 +307,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TitleBox" translatesAutoresizingMaskIntoConstraints="NO" id="nmc-0n-XSE">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="jYj-Vc-Qlc"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="nmc-0n-XSE" firstAttribute="leading" secondItem="u3g-sf-smz" secondAttribute="leading" id="DLb-58-tOk"/>
+                            <constraint firstItem="nmc-0n-XSE" firstAttribute="top" secondItem="Juq-cp-eLL" secondAttribute="top" id="RLf-xF-1bF"/>
                             <constraint firstItem="nmc-0n-XSE" firstAttribute="trailing" secondItem="u3g-sf-smz" secondAttribute="trailing" id="dRH-Eq-352"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="u3g-sf-smz"/>
@@ -314,7 +338,7 @@
             <objects>
                 <viewController storyboardIdentifier="HomeVC" id="8TF-mX-t8z" customClass="HomeVC" customModule="Muz_Hub" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MAO-pn-uf1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TitleBox" translatesAutoresizingMaskIntoConstraints="NO" id="cX3-t6-Ihg">
@@ -362,7 +386,7 @@
             <objects>
                 <viewController storyboardIdentifier="MenuVC" id="Bve-eQ-Tyq" customClass="MenuVC" customModule="Muz_Hub" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8Om-uc-11a">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oGB-Cy-qBf">

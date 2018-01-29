@@ -9,8 +9,7 @@
 import UIKit
 import FirebaseAuth
 
-class MenuVC: UIViewController, UITableViewDelegate {
-    
+class MenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var profileButton: UIButton!
@@ -43,4 +42,15 @@ class MenuVC: UIViewController, UITableViewDelegate {
         present(mapVC!, animated: true, completion: nil)
     }
     
+    // MARK: - tableview
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "")
+        
+        return cell!
+    }
 }

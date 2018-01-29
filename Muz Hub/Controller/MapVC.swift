@@ -41,6 +41,10 @@ class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
         
         self.mapView.setRegion(region, animated: true)
     }
+    
+    @IBAction func cancleButtonWasPressed(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
 
     /*
     // MARK: - Navigation
