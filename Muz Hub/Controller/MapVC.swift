@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 import CoreLocation
+import FirebaseDatabase
 
 class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
@@ -44,6 +45,12 @@ class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
     @IBAction func cancleButtonWasPressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    func loadMap() {
+        Database.database().reference().child("location").observeSingleEvent(of: .value) { (snapshot) in
+            
+        }
     }
 
     /*
