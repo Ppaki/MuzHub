@@ -49,7 +49,7 @@ class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
     func loadMap() {
         Database.database().reference().child("location").observeSingleEvent(of: .value) { (snapshot) in
-            
+            // not sure how yet
         }
     }
 
