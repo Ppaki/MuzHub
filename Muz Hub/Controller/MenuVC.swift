@@ -18,7 +18,6 @@ class MenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(isLogedIn)
         
         if Auth.auth().currentUser?.uid != nil {
             isLogedIn = true
