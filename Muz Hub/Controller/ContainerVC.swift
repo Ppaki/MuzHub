@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 enum MenuState {
     case menuClose
@@ -14,6 +15,9 @@ enum MenuState {
 
 enum ShowWhichVC {
     case HomeVC
+    case ProfileVC
+    case LoginVC
+    case MapVC
 }
 
 var showVC: ShowWhichVC = .HomeVC
@@ -21,9 +25,20 @@ var showVC: ShowWhichVC = .HomeVC
 class ContainerVC: UIViewController {
     
     var homeVC: HomeVC!
-    var menuVC: MenuVC!
+    var profileVC: ProfileVC!
+    var loginVC: LoginVC!
+    var mapVC: MapVC!
+    
+    @IBOutlet weak var mapButton: UIButton!
+    @IBOutlet weak var profileButton: UIButton!
+    @IBOutlet weak var homeButton: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
     
     var centerController: UIViewController!
+    var isHidden = false
+    let centerPanelExpandedOffset: CGFloat = 160
+    var tap: UITapGestureRecognizer!
+    
     var currentState: MenuState = .menuClose {
         didSet {
             let shouldShowShadow = (currentState != .menuClose)
@@ -31,13 +46,19 @@ class ContainerVC: UIViewController {
         }
     }
     
-    var isHidden = false
-    let centerPanelExpandedOffset: CGFloat = 160
-    var tap: UITapGestureRecognizer!
-    
+    // MARK: - override func
     override func viewDidLoad() {
         super.viewDidLoad()
         initCenter(screen: showVC)
+        if Auth.auth().currentUser != nil {
+            self.loginButton.isHidden = true
+        } else {
+            self.loginButton.isHidden = false
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
     }
     
     override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
@@ -48,6 +69,32 @@ class ContainerVC: UIViewController {
         return isHidden
     }
     
+    //MARK: - ib action buttons
+    @IBAction func loginButtonPressed(_ sender: UIButton) {
+        showVC = .LoginVC
+        initCenter(screen: showVC)
+        toggleLeftPanel()
+    }
+    
+    @IBAction func profileButtonPressed(_ sender: UIButton) {
+        showVC = .ProfileVC
+        initCenter(screen: showVC)
+        toggleLeftPanel()
+    }
+    
+    @IBAction func mapButtonPressed(_ sender: UIButton) {
+        showVC = .MapVC
+        initCenter(screen: showVC)
+        toggleLeftPanel()
+    }
+    
+    @IBAction func homeButtonPressed(_ sender: UIButton) {
+        showVC = .HomeVC
+        initCenter(screen: showVC)
+        toggleLeftPanel()
+    }
+    
+    // MARK: - Helper
     func initCenter(screen: ShowWhichVC) {
         
         var presentingController: UIViewController!
@@ -57,6 +104,25 @@ class ContainerVC: UIViewController {
             homeVC = UIStoryboard.homeVC()
             homeVC.delegate = self
             presentingController = homeVC
+            
+        } else if screen == ShowWhichVC.ProfileVC {
+            showVC = screen
+            profileVC = UIStoryboard.profileVC()
+            profileVC.delegate = self
+            presentingController = profileVC
+            
+        } else if screen == ShowWhichVC.MapVC {
+            showVC = screen
+            mapVC = UIStoryboard.mapVC()
+            mapVC.delegate = self
+            presentingController = mapVC
+            
+        } else if screen == ShowWhichVC.LoginVC {
+            showVC = screen
+            loginVC = UIStoryboard.loginVC()
+            loginVC.delegate = self
+            presentingController = loginVC
+            
         }
         
         if let con = centerController {
@@ -69,35 +135,22 @@ class ContainerVC: UIViewController {
         view.addSubview(centerController.view)
         addChildViewController(centerController)
         centerController.didMove(toParentViewController: self)
+        
     }
 }
 
 extension ContainerVC: CenterVCDelegate {
-
-    func changeVC(newController: ShowWhichVC) {
-        //initCenter(screen: newController)
+    func reloadContainer() {
+        initCenter(screen: showVC)
     }
     
     func toggleLeftPanel() {
         let menuNotOpen = (currentState != .menuOpen)
         
         if menuNotOpen {
-            addLeftPanelViewController()
+            
         }
         animateLeftPanel(shouldExpend: menuNotOpen)
-    }
-    
-    func addLeftPanelViewController() {
-        if menuVC == nil {
-            menuVC = UIStoryboard.menuVC()
-            addChildSidePanelViewController(menuVC!)
-        }
-    }
-    
-    func addChildSidePanelViewController(_ sidePanelController: MenuVC) {
-        view.insertSubview(sidePanelController.view, at: 0)
-        addChildViewController(sidePanelController)
-        sidePanelController.didMove(toParentViewController: self)
     }
     
     @objc func animateLeftPanel(shouldExpend: Bool) {
@@ -112,7 +165,6 @@ extension ContainerVC: CenterVCDelegate {
             animateCenterPanelXPosition(targetPosition: 0, completion: { (finished) in
                 if finished == true {
                     self.currentState = .menuClose
-                    self.menuVC = nil
                 }
             })
         }
@@ -169,12 +221,20 @@ private extension UIStoryboard {
         return UIStoryboard(name: "Main", bundle: Bundle.main)
     }
     
-    class func menuVC() -> MenuVC? {
-        return mainStorybroad().instantiateViewController(withIdentifier: "MenuVC") as? MenuVC
-    }
-    
     class func homeVC() -> HomeVC? {
         return mainStorybroad().instantiateViewController(withIdentifier: "HomeVC") as? HomeVC
+    }
+    
+    class func profileVC() -> ProfileVC? {
+        return mainStorybroad().instantiateViewController(withIdentifier: "ProfileVC") as? ProfileVC
+    }
+    
+    class func mapVC() -> MapVC? {
+        return mainStorybroad().instantiateViewController(withIdentifier: "MapVC") as? MapVC
+    }
+    
+    class func loginVC() -> LoginVC? {
+        return mainStorybroad().instantiateViewController(withIdentifier: "LoginVC") as? LoginVC
     }
 }
 

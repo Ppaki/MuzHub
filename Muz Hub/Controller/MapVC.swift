@@ -12,7 +12,9 @@ import CoreLocation
 import FirebaseDatabase
 
 class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
-
+    
+    var delegate: CenterVCDelegate?
+    
     var locationManager: CLLocationManager?
     @IBOutlet weak var mapView: MKMapView!
     
@@ -43,8 +45,8 @@ class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
         self.mapView.setRegion(region, animated: true)
     }
     
-    @IBAction func cancleButtonWasPressed(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
+    @IBAction func menuButtonWasPressed(_ sender: UIButton) {
+        delegate?.toggleLeftPanel()
     }
     
     func loadMap() {

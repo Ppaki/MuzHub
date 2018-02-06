@@ -13,6 +13,8 @@ import MapKit
 
 class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    var delegate: CenterVCDelegate?
+    
     var user: User!
     var institutions = [Institution]()
     
@@ -28,12 +30,13 @@ class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.delegate = self
         tableView.dataSource = self
         
-        user = FirebaseService.MS.user
-        self.tableView.reloadData()
-        
-        nameLabel.text = user.name
-        emailLabel.text = user.email
-        otherInfoLabel.text = user.provider
+        if Auth.auth().currentUser != nil {
+            self.user = FirebaseService.MS.user
+            self.tableView.reloadData()
+            nameLabel.text = user.name
+            emailLabel.text = user.email
+            otherInfoLabel.text = user.provider
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -43,8 +46,8 @@ class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
     }
 
-    @IBAction func cancleButtonWasPressed(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
+    @IBAction func menuButtonWasPressed(_ sender: UIButton) {
+        delegate?.toggleLeftPanel()
     }
     
     // MARK: - TableView Stuff
@@ -62,7 +65,11 @@ class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.user.favInstitutions.count
+        if Auth.auth().currentUser != nil {
+            return self.user.favInstitutions.count
+        } else {
+            return 0
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

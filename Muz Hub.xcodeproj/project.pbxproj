@@ -21,7 +21,6 @@
 		A32FB32C1FA6AEFF00ABBE05 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A32FB32B1FA6AEFF00ABBE05 /* GoogleService-Info.plist */; };
 		A33777551FB6AC4F0097EE8B /* ContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33777541FB6AC4F0097EE8B /* ContainerVC.swift */; };
 		A33777581FB6B3800097EE8B /* CenterVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33777571FB6B3800097EE8B /* CenterVCDelegate.swift */; };
-		A33A32D01FB93768003518FF /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33A32CF1FB93768003518FF /* MenuVC.swift */; };
 		A33A32D41FB948D4003518FF /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33A32D31FB948D4003518FF /* ProfileVC.swift */; };
 		A34987C81FB951C5001F2A64 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34987C71FB951C5001F2A64 /* LoginVC.swift */; };
 		A3550C2A1FA6C1F8001C71CC /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3550C291FA6C1F8001C71CC /* HomeVC.swift */; };
@@ -32,7 +31,6 @@
 		A393A0431FA6E6CE008D597D /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = A393A0421FA6E6CE008D597D /* Post.swift */; };
 		A39B92E21FBE8E6900C5962F /* FIrebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39B92E11FBE8E6900C5962F /* FIrebaseService.swift */; };
 		A3A4529D2003225200EF1088 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A4529C2003225200EF1088 /* MapVC.swift */; };
-		A451A2AE20293F630071ED7F /* LogoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A451A2AD20293F630071ED7F /* LogoutVC.swift */; };
 		EAFC3C39F4EA3BECC02DBEB2 /* Pods_Muz_Hub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C414E16ED574B346901DE7EE /* Pods_Muz_Hub.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,7 +73,6 @@
 		A32FB32B1FA6AEFF00ABBE05 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A33777541FB6AC4F0097EE8B /* ContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerVC.swift; sourceTree = "<group>"; };
 		A33777571FB6B3800097EE8B /* CenterVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterVCDelegate.swift; sourceTree = "<group>"; };
-		A33A32CF1FB93768003518FF /* MenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
 		A33A32D31FB948D4003518FF /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		A34987C71FB951C5001F2A64 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		A3550C291FA6C1F8001C71CC /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -86,7 +83,6 @@
 		A393A0421FA6E6CE008D597D /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		A39B92E11FBE8E6900C5962F /* FIrebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIrebaseService.swift; sourceTree = "<group>"; };
 		A3A4529C2003225200EF1088 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
-		A451A2AD20293F630071ED7F /* LogoutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutVC.swift; sourceTree = "<group>"; };
 		C414E16ED574B346901DE7EE /* Pods_Muz_Hub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Muz_Hub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF496D8DBC09B53C5B3747DE /* Pods-Muz Hub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Muz Hub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Muz Hub/Pods-Muz Hub.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -236,12 +232,10 @@
 			children = (
 				A3550C291FA6C1F8001C71CC /* HomeVC.swift */,
 				A33777541FB6AC4F0097EE8B /* ContainerVC.swift */,
-				A33A32CF1FB93768003518FF /* MenuVC.swift */,
 				A33A32D31FB948D4003518FF /* ProfileVC.swift */,
 				A34987C71FB951C5001F2A64 /* LoginVC.swift */,
 				A31C62E91FD516D80014253D /* InstitutionVC.swift */,
 				A3A4529C2003225200EF1088 /* MapVC.swift */,
-				A451A2AD20293F630071ED7F /* LogoutVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -442,7 +436,6 @@
 				A393A0411FA6E425008D597D /* Institution.swift in Sources */,
 				A393A0431FA6E6CE008D597D /* Post.swift in Sources */,
 				A32FB2FC1FA6ADC200ABBE05 /* AppDelegate.swift in Sources */,
-				A33A32D01FB93768003518FF /* MenuVC.swift in Sources */,
 				A3A4529D2003225200EF1088 /* MapVC.swift in Sources */,
 				A328C4801FAB97A0002B952B /* PostCollectionCell.swift in Sources */,
 				A3822EE4201E570B00A745D3 /* RoundedCornerButton.swift in Sources */,
@@ -451,7 +444,6 @@
 				A39B92E21FBE8E6900C5962F /* FIrebaseService.swift in Sources */,
 				A33A32D41FB948D4003518FF /* ProfileVC.swift in Sources */,
 				A328C4821FAB9EDE002B952B /* InstitutionCollectionCell.swift in Sources */,
-				A451A2AE20293F630071ED7F /* LogoutVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

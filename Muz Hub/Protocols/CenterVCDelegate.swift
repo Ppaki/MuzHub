@@ -10,7 +10,6 @@ import UIKit
 
 protocol CenterVCDelegate {
     func toggleLeftPanel()
-    func addLeftPanelViewController()
+    func reloadContainer()
     func animateLeftPanel(shouldExpend: Bool)
-    func changeVC(newController: ShowWhichVC)
 }

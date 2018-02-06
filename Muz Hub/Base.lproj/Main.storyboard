@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8TF-mX-t8z">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Rk4-US-haZ">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,21 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--LogoutVC-->
-        <scene sceneID="AAV-ea-0EZ">
-            <objects>
-                <viewController storyboardIdentifier="LogoutVC" id="JtF-D5-9nL" customClass="LogoutVC" customModule="Muz_Hub" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="PhP-Yc-noG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="yIa-o1-n0g"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pxp-0u-Ixw" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="857" y="-1619"/>
-        </scene>
         <!--LoginVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -73,12 +58,11 @@
                                 <rect key="frame" x="20" y="50" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="X">
+                                <state key="normal" title="| | |">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="cancelButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ekS-lS-7lI"/>
-                                    <action selector="cancleButtonWasPressed:" destination="Kts-Cv-hRO" eventType="touchUpInside" id="vQ1-yj-kEF"/>
+                                    <action selector="menuButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L2o-7D-D91"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kvU-oA-aCc" customClass="RoundedCornerTextField" customModule="Muz_Hub" customModuleProvider="target">
@@ -113,7 +97,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1624.8" y="-914.392803598201"/>
+            <point key="canvasLocation" x="3225" y="-233"/>
         </scene>
         <!--MapVC-->
         <scene sceneID="WOo-qe-r8f">
@@ -133,14 +117,13 @@
                                 <rect key="frame" x="0.0" y="98" width="375" height="680"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AGY-15-ppi">
-                                <rect key="frame" x="16" y="42" width="30" height="48"/>
+                                <rect key="frame" x="16" y="42" width="44" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="X">
+                                <state key="normal" title="| | |">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="cancleButtonWasPressed:" destination="Kts-Cv-hRO" eventType="touchUpInside" id="6B2-xD-WbG"/>
-                                    <action selector="cancleButtonWasPressed:" destination="e2X-Se-1LS" eventType="touchUpInside" id="rP6-VA-tFf"/>
+                                    <action selector="menuButtonWasPressed:" destination="e2X-Se-1LS" eventType="touchUpInside" id="uam-SO-Y8o"/>
                                 </connections>
                             </button>
                             <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Eg-1l-RBy">
@@ -202,11 +185,11 @@
                                 <rect key="frame" x="20" y="50" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="X">
+                                <state key="normal" title="| | |">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="cancleButtonWasPressed:" destination="Kts-Cv-hRO" eventType="touchUpInside" id="TfW-R9-DZa"/>
+                                    <action selector="menuButtonWasPressed:" destination="Kts-Cv-hRO" eventType="touchUpInside" id="5z8-ih-cEd"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCD-8d-KY6">
@@ -283,7 +266,6 @@
                                 </state>
                                 <connections>
                                     <action selector="cancelButton:" destination="zul-Wb-sBJ" eventType="touchUpInside" id="j0k-BJ-AVp"/>
-                                    <action selector="cancleButtonWasPressed:" destination="Kts-Cv-hRO" eventType="touchUpInside" id="Kwj-1H-nqE"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="address" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ojr-b6-djN">
@@ -346,7 +328,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wAl-MT-9sp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2061.5999999999999" y="527.58620689655174"/>
+            <point key="canvasLocation" x="1625" y="560"/>
         </scene>
         <!--HomeVC-->
         <scene sceneID="gak-aN-LDQ">
@@ -396,85 +378,79 @@
             </objects>
             <point key="canvasLocation" x="858.39999999999998" y="-232.53373313343329"/>
         </scene>
-        <!--MenuVC-->
-        <scene sceneID="VA0-3m-hwO">
+        <!--ContainerVC-->
+        <scene sceneID="9dK-Fm-ydo">
             <objects>
-                <viewController storyboardIdentifier="MenuVC" id="Bve-eQ-Tyq" customClass="MenuVC" customModule="Muz_Hub" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8Om-uc-11a">
+                <viewController storyboardIdentifier="ContainerVC" id="Rk4-US-haZ" customClass="ContainerVC" customModule="Muz_Hub" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aB8-W4-hBx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oGB-Cy-qBf">
-                                <rect key="frame" x="20" y="88" width="200" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Map">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="mapViewButton:" destination="Bve-eQ-Tyq" eventType="touchUpInside" id="Uyg-sL-3hh"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JlQ-Wb-ShR">
-                                <rect key="frame" x="20" y="126" width="200" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Messages">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awN-Yw-PZH">
-                                <rect key="frame" x="20" y="617" width="200" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Login / SignUp">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="loginButtonPressed:" destination="Bve-eQ-Tyq" eventType="touchUpInside" id="Hdf-U5-aLW"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Menu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3jg-ru-tLS">
-                                <rect key="frame" x="20" y="50" width="200" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Menu" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0n-8m-4pe">
+                                <rect key="frame" x="26" y="54" width="175" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fu0-Nd-njP">
-                                <rect key="frame" x="20" y="164" width="200" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJQ-wo-R6r">
+                                <rect key="frame" x="26" y="92" width="200" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Home">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="homeButtonPressed:" destination="Rk4-US-haZ" eventType="touchUpInside" id="BGy-9v-tMh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v2x-qp-STg">
+                                <rect key="frame" x="26" y="130" width="200" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Profile">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="profileButtonPressed:" destination="Bve-eQ-Tyq" eventType="touchUpInside" id="jKU-Og-EpW"/>
+                                    <action selector="profileButtonPressed:" destination="Rk4-US-haZ" eventType="touchUpInside" id="wEV-PF-fyq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rDa-xN-RE5">
-                                <rect key="frame" x="20" y="202" width="200" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Jz-Bl-xeJ">
+                                <rect key="frame" x="26" y="703" width="200" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="logout">
+                                <state key="normal" title="Login / Sign-up">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="logoutButtonPressed:" destination="Bve-eQ-Tyq" eventType="touchUpInside" id="gmw-LZ-W6i"/>
+                                    <action selector="loginButtonPressed:" destination="Rk4-US-haZ" eventType="touchUpInside" id="hiH-D7-qjk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NfM-PD-blA">
+                                <rect key="frame" x="26" y="168" width="200" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Map">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="mapButtonPressed:" destination="Rk4-US-haZ" eventType="touchUpInside" id="qRY-d6-mRr"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="8GS-8t-y4k"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <viewLayoutGuide key="safeArea" id="1lO-a4-H5D"/>
                     </view>
                     <connections>
-                        <outlet property="loginButton" destination="awN-Yw-PZH" id="kuF-pj-Zcv"/>
-                        <outlet property="profileButton" destination="Fu0-Nd-njP" id="u8J-y9-sTT"/>
+                        <outlet property="homeButton" destination="SJQ-wo-R6r" id="jy3-Bj-ek5"/>
+                        <outlet property="loginButton" destination="5Jz-Bl-xeJ" id="RLT-V2-ogF"/>
+                        <outlet property="mapButton" destination="NfM-PD-blA" id="K6y-m2-gXw"/>
+                        <outlet property="profileButton" destination="v2x-qp-STg" id="bbd-2g-PRa"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5gL-75-A6o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3mx-kj-ZtS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="856.79999999999995" y="-914.392803598201"/>
+            <point key="canvasLocation" x="1624.8" y="-915.51724137931035"/>
         </scene>
     </scenes>
     <resources>

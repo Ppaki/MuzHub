@@ -11,6 +11,8 @@ import FirebaseAuth
 
 class LoginVC: UIViewController {
     
+    var delegate: CenterVCDelegate?
+    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
@@ -19,12 +21,23 @@ class LoginVC: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if Auth.auth().currentUser != nil {
+            do {
+                try Auth.auth().signOut()
+            } catch let error as NSError {
+                print("error: \(error)")
+            }
+        }
+    }
 
     @IBAction func loginButtonWasPressed(_ sender: UIButton) {
         Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
             if error == nil {
                 FirebaseService.MS.getUser()
-                self.dismiss(animated: true, completion: nil)
+                showVC = .HomeVC
+                self.delegate?.reloadContainer()
             } else {
                 print(error! as NSError)
             }
@@ -40,9 +53,8 @@ class LoginVC: UIViewController {
         }
     }
     
-    @IBAction func cancelButtonWasPressed(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
-        
+    @IBAction func menuButtonWasPressed(_ sender: UIButton) {
+        delegate?.toggleLeftPanel()
     }
     
 }
