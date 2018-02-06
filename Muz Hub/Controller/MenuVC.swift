@@ -14,14 +14,25 @@ class MenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var profileButton: UIButton!
     
+    var isLogedIn: Bool!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(isLogedIn)
         
         if Auth.auth().currentUser?.uid != nil {
-            loginButton.isHidden = true
+            isLogedIn = true
+            loginButton.titleLabel?.text = "logout"
+            profileButton.isHidden = false
         } else {
+            isLogedIn = false
             profileButton.isHidden = true
+            loginButton.titleLabel?.text = "Login /sign-up"
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        viewDidLoad()
     }
     
     @IBAction func profileButtonPressed(_ sender: UIButton) {
@@ -31,15 +42,43 @@ class MenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
-        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginVC") as? LoginVC
-        present(loginVC!, animated: true, completion: nil)
+        if !isLogedIn {
+            login()
+        } else {
+            logout()
+        }
     }
     
     @IBAction func mapViewButton(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         let mapVC = storyboard.instantiateViewController(withIdentifier: "MapVC") as? MapVC
         present(mapVC!, animated: true, completion: nil)
+    }
+    
+    @IBAction func logoutButtonPressed(_ sender: UIButton) {
+        do {
+            try Auth.auth().signOut()
+        } catch let error as NSError {
+            print("could not signout: @%", error)
+        }
+    }
+    
+    // MARK: - helper
+    
+    func login() {
+        isLogedIn = !isLogedIn
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginVC") as? LoginVC
+        present(loginVC!, animated: true, completion: nil)
+    }
+    
+    func logout() {
+        isLogedIn = !isLogedIn
+        do {
+            try Auth.auth().signOut()
+        } catch let error as NSError {
+            print("could not signout: @%", error)
+        }
     }
     
     // MARK: - tableview

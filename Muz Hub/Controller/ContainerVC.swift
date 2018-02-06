@@ -73,10 +73,9 @@ class ContainerVC: UIViewController {
 }
 
 extension ContainerVC: CenterVCDelegate {
-    
+
     func changeVC(newController: ShowWhichVC) {
-        print("here")
-        initCenter(screen: newController)
+        //initCenter(screen: newController)
     }
     
     func toggleLeftPanel() {

@@ -23,6 +23,7 @@ class LoginVC: UIViewController {
     @IBAction func loginButtonWasPressed(_ sender: UIButton) {
         Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
             if error == nil {
+                FirebaseService.MS.getUser()
                 self.dismiss(animated: true, completion: nil)
             } else {
                 print(error! as NSError)

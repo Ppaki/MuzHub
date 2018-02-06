@@ -32,6 +32,7 @@
 		A393A0431FA6E6CE008D597D /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = A393A0421FA6E6CE008D597D /* Post.swift */; };
 		A39B92E21FBE8E6900C5962F /* FIrebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39B92E11FBE8E6900C5962F /* FIrebaseService.swift */; };
 		A3A4529D2003225200EF1088 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A4529C2003225200EF1088 /* MapVC.swift */; };
+		A451A2AE20293F630071ED7F /* LogoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A451A2AD20293F630071ED7F /* LogoutVC.swift */; };
 		EAFC3C39F4EA3BECC02DBEB2 /* Pods_Muz_Hub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C414E16ED574B346901DE7EE /* Pods_Muz_Hub.framework */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +86,7 @@
 		A393A0421FA6E6CE008D597D /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		A39B92E11FBE8E6900C5962F /* FIrebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIrebaseService.swift; sourceTree = "<group>"; };
 		A3A4529C2003225200EF1088 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		A451A2AD20293F630071ED7F /* LogoutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutVC.swift; sourceTree = "<group>"; };
 		C414E16ED574B346901DE7EE /* Pods_Muz_Hub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Muz_Hub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF496D8DBC09B53C5B3747DE /* Pods-Muz Hub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Muz Hub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Muz Hub/Pods-Muz Hub.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -239,6 +241,7 @@
 				A34987C71FB951C5001F2A64 /* LoginVC.swift */,
 				A31C62E91FD516D80014253D /* InstitutionVC.swift */,
 				A3A4529C2003225200EF1088 /* MapVC.swift */,
+				A451A2AD20293F630071ED7F /* LogoutVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -448,6 +451,7 @@
 				A39B92E21FBE8E6900C5962F /* FIrebaseService.swift in Sources */,
 				A33A32D41FB948D4003518FF /* ProfileVC.swift in Sources */,
 				A328C4821FAB9EDE002B952B /* InstitutionCollectionCell.swift in Sources */,
+				A451A2AE20293F630071ED7F /* LogoutVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

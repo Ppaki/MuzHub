@@ -51,13 +51,13 @@ class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "institute", for: indexPath)
         
-        /*loadFavorites(complete: {
+        loadFavorites(complete: {
             cell.textLabel?.text = self.institutions[indexPath.row].name
-        }, row: indexPath.row)*/
-        
+        }, row: indexPath.row)
+        /*
         user.loadFavorite(complete: {
             cell.textLabel?.text = self.user.institutions[indexPath.row].name
-        }, atRow: indexPath.row)
+        }, atRow: indexPath.row)*/
         return cell
     }
     
