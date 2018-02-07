@@ -57,26 +57,4 @@ class User {
     var institutions: [Institution] {
         return self._institutions
     }
-    
-    func loadFavorite(complete: @escaping DownloadCompleted, atRow: Int) {
-        var institute: Institution!
-        let ref = Database.database().reference()
-        let key = _favInstitutions[atRow]
-        
-        ref.child("institution").child(key).observeSingleEvent(of: .value) { (snapshot) in
-            
-            let value = snapshot.value as? NSDictionary
-            let name = value?["name"] as? String ?? ""
-            let info = value?["info"] as? String ?? ""
-            let locationString = value?["location"] as! NSDictionary
-            let latitude = locationString["latitude"] as! CLLocationDegrees
-            let longtitude = locationString["longitude"] as! CLLocationDegrees
-            let location = CLLocation(latitude: latitude, longitude: longtitude)
-            let schedule = value?["schedule"] as! NSDictionary
-            
-            institute = Institution(id: key, name: name, location: location, schedule: schedule, info: info)
-            self._institutions.append(institute)
-            complete()
-        }
-    }
 }

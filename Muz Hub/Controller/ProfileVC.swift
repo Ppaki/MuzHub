@@ -57,10 +57,7 @@ class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         loadFavorites(complete: {
             cell.textLabel?.text = self.institutions[indexPath.row].name
         }, row: indexPath.row)
-        /*
-        user.loadFavorite(complete: {
-            cell.textLabel?.text = self.user.institutions[indexPath.row].name
-        }, atRow: indexPath.row)*/
+        
         return cell
     }
     
@@ -80,8 +77,7 @@ class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         if segue.identifier == "institution" {
             let destinationController: InstitutionVC = (segue.destination as? InstitutionVC)!
             let indexRow = self.tableView.indexPathForSelectedRow?.row
-            let user = FirebaseService.MS.user
-            destinationController.institute = user.institutions[indexRow!]
+            destinationController.institute = self.institutions[indexRow!]
         }
     }
     
