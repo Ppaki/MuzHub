@@ -31,6 +31,7 @@
 		A393A0431FA6E6CE008D597D /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = A393A0421FA6E6CE008D597D /* Post.swift */; };
 		A39B92E21FBE8E6900C5962F /* FIrebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39B92E11FBE8E6900C5962F /* FIrebaseService.swift */; };
 		A3A4529D2003225200EF1088 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A4529C2003225200EF1088 /* MapVC.swift */; };
+		A48D90B3202B930F00E91165 /* InstitutionSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D90B2202B930F00E91165 /* InstitutionSchedule.swift */; };
 		EAFC3C39F4EA3BECC02DBEB2 /* Pods_Muz_Hub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C414E16ED574B346901DE7EE /* Pods_Muz_Hub.framework */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +84,7 @@
 		A393A0421FA6E6CE008D597D /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		A39B92E11FBE8E6900C5962F /* FIrebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIrebaseService.swift; sourceTree = "<group>"; };
 		A3A4529C2003225200EF1088 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		A48D90B2202B930F00E91165 /* InstitutionSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstitutionSchedule.swift; sourceTree = "<group>"; };
 		C414E16ED574B346901DE7EE /* Pods_Muz_Hub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Muz_Hub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF496D8DBC09B53C5B3747DE /* Pods-Muz Hub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Muz Hub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Muz Hub/Pods-Muz Hub.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -208,8 +210,8 @@
 		A3CA55F91FA6B5F500F89088 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A48D90B1202B92EE00E91165 /* Institution */,
 				A393A03E1FA6E2CE008D597D /* User.swift */,
-				A393A0401FA6E425008D597D /* Institution.swift */,
 				A393A0421FA6E6CE008D597D /* Post.swift */,
 				A39B92E11FBE8E6900C5962F /* FIrebaseService.swift */,
 			);
@@ -238,6 +240,15 @@
 				A3A4529C2003225200EF1088 /* MapVC.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		A48D90B1202B92EE00E91165 /* Institution */ = {
+			isa = PBXGroup;
+			children = (
+				A393A0401FA6E425008D597D /* Institution.swift */,
+				A48D90B2202B930F00E91165 /* InstitutionSchedule.swift */,
+			);
+			path = Institution;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -427,6 +438,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A48D90B3202B930F00E91165 /* InstitutionSchedule.swift in Sources */,
 				A33777581FB6B3800097EE8B /* CenterVCDelegate.swift in Sources */,
 				A31C62EA1FD516D80014253D /* InstitutionVC.swift in Sources */,
 				A393A03F1FA6E2CE008D597D /* User.swift in Sources */,

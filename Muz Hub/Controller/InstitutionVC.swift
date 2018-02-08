@@ -7,33 +7,44 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import CoreLocation
 
-class InstitutionVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class InstitutionVC: UIViewController {
     
     var institute: Institution!
-    var scheduleKeys: Array<String>!
-    var scheduleValues: Array<String>!
+    var institutionSchedule: InstitutionSchedule!
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var infoLabel: UILabel!
     
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var timeLabel: UILabel!
-    
+    @IBOutlet weak var fajrLabel: UILabel!
+    @IBOutlet weak var zuhrLabel: UILabel!
+    @IBOutlet weak var asrLabel: UILabel!
+    @IBOutlet weak var maghribLabel: UILabel!
+    @IBOutlet weak var ishaLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        tableView.delegate = self
-        tableView.dataSource = self
-    
-        nameLabel.text = institute.name
-        addressLabel.text = "\(institute.street) \n\(institute.city), \(institute.state) \(institute.zip)"
-        infoLabel.text = institute.info
         
-        loadSchedule()
+        if institutionSchedule == nil {
+            
+            loadSchedule {
+                self.nameLabel.text = self.institute.name
+                self.infoLabel.text = self.institute.info
+                self.addressLabel.text = "\(self.institute.street) \n\(self.institute.city), \(self.institute.state) \(self.institute.zip)"
+                
+                self.fajrLabel.text = "Salat al-fajr: \(self.institutionSchedule.schedule["Salat al-fajr"]!)"
+                self.zuhrLabel.text = "Salat al-zuhr: \(self.institutionSchedule.schedule["Salat al-zuhr"]!)"
+                self.asrLabel.text = "Salat al-'asr: \(self.institutionSchedule.schedule["Salat al-'asr"]!)"
+                self.maghribLabel.text = "Salat al-maghrib: \(self.institutionSchedule.schedule["Salat al-maghrib"]!)"
+                self.ishaLabel.text = "Salat al-'isha: \(self.institutionSchedule.schedule["Salat al-'isha"]!)"
+                
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,25 +56,14 @@ class InstitutionVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         dismiss(animated: true, completion: nil)
     }
     
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.scheduleKeys.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "schedule", for: indexPath)
-        cell.textLabel?.text = "\(self.scheduleKeys[indexPath.row]): \(self.scheduleValues[indexPath.row])"
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-    }
-    
-    func loadSchedule() {
-        self.scheduleKeys = self.institute.schedule.allKeys as! Array<String>
-        self.scheduleValues = self.institute.schedule.allValues as! Array<String>
-        tableView.reloadData()
+    func loadSchedule(complete: @escaping DownloadCompleted) {
+        let ref = Database.database().reference()
+        ref.child("institution").child(institute.id).child("schedule").observeSingleEvent(of: .value) { (snapshot) in
+            
+            let value = snapshot.value as? NSDictionary
+            self.institutionSchedule = InstitutionSchedule(id: self.institute.id, schedule: value!)
+            complete()
+        }
     }
     
     /*

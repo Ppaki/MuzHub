@@ -16,17 +16,17 @@ class User {
     private var _name: String = ""
     private var _email: String = ""
     private var _uid: String = ""
-    private var _url: String! = ""
     private var _provider: String = ""
+    private var _type: String = ""
     private var _favInstitutions: Array<String>!
     private var _institutions = [Institution]()
     
-    init(name: String, email: String, uid: String, provider: String, favInstitutions: Array<String>) {
+    init(name: String, email: String, uid: String, provider: String, type: String, favInstitutions: Array<String>) {
         self._name = name
         self._email = email
         self._uid = uid
-        self._url = "user/\(uid)"
         self._provider = provider
+        self._type = type
         self._favInstitutions = favInstitutions
     }
     
@@ -46,15 +46,16 @@ class User {
         return self._provider
     }
     
-    var favInstitutions: Array<String> {
-        return _favInstitutions
+    var type: String {
+        return _type
     }
     
-    var url: String {
-        return _url
+    var favInstitutions: Array<String> {
+        return _favInstitutions
     }
     
     var institutions: [Institution] {
         return self._institutions
     }
+    
 }

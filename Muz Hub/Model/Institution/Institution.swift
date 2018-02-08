@@ -12,11 +12,9 @@ import CoreLocation
 class Institution {
     
     private var _id: String = ""
-    private var _url: String = ""
     private var _name: String = ""
-    private var _location: CLLocation!
-    private var _schedule: NSDictionary
     private var _info: String = ""
+    private var _location: CLLocation!
     private var _street: String = ""
     private var _city: String = ""
     private var _state: String = ""
@@ -27,20 +25,8 @@ class Institution {
         return self._id
     }
     
-    var url: String {
-        return _url
-    }
-    
     var name: String {
         return self._name
-    }
-    
-    var location: CLLocation {
-        return self._location
-    }
-    
-    var schedule: NSDictionary {
-        return self._schedule
     }
     
     var info: String {
@@ -67,34 +53,24 @@ class Institution {
         return self._country
     }
     
-    init(id: String, name: String, location: CLLocation, schedule: NSDictionary, info: String) {
+    init(id: String, name: String, info: String) {
         self._id = id
-        self._url = "intitute\(id)"
         self._name = name
-        self._location = location
-        self._schedule = schedule
         self._info = info
-        
-        updateAddress()
     }
     
-    func updateAddress() {
+    func updateAddress(location: CLLocation) {
         let geoCoder = CLGeocoder()
         
-        geoCoder.reverseGeocodeLocation(self._location) { (placemarks, error) in
+        geoCoder.reverseGeocodeLocation(location) { (placemarks, error) in
             
             var placeMark: CLPlacemark!
             placeMark = placemarks?[0]
             
-            
-            // Location name
+            // Street number and road
             if let locationName = placeMark.name as NSString? {
                 self._street += "\(locationName)"
             }
-            /*/ Street address
-            if let street = placeMark.thoroughfare as NSString? {
-                self._street += " \(street)"
-            }*/
             // City
             if let city = placeMark.locality as NSString? {
                 self._city = city as String

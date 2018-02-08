@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseAuth
 import FirebaseDatabase
+import CoreLocation
 import MapKit
 
 class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -30,7 +31,7 @@ class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.delegate = self
         tableView.dataSource = self
         
-        if Auth.auth().currentUser != nil {
+        if Auth.auth().currentUser != nil && user == nil {
             self.user = FirebaseService.MS.user
             self.tableView.reloadData()
             nameLabel.text = user.name
@@ -40,9 +41,10 @@ class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        
-        institutions.removeAll()
-        user = nil
+    
+        //dont need this anymore
+        //institutions.removeAll()
+        //user = nil
         
     }
 
@@ -93,14 +95,18 @@ class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             let value = snapshot.value as? NSDictionary
             let name = value?["name"] as? String ?? ""
             let info = value?["info"] as? String ?? ""
-            let locationString = value?["location"] as! NSDictionary
-            let latitude = locationString["latitude"] as! CLLocationDegrees
-            let longtitude = locationString["longitude"] as! CLLocationDegrees
-            let location = CLLocation(latitude: latitude, longitude: longtitude)
-            let schedule = value?["schedule"] as! NSDictionary
             
-            institute = Institution(id: key, name: name, location: location, schedule: schedule, info: info)
+            institute = Institution(id: key, name: name, info: info)
             self.institutions.append(institute)
+        }
+        
+        ref.child("location").child(key).observeSingleEvent(of: .value) { (snapshot) in
+            
+            let value = snapshot.value as? NSDictionary
+            let latitude = value!["latitude"] as? CLLocationDegrees
+            let longitude = value!["longitude"] as? CLLocationDegrees
+            let location = CLLocation(latitude: latitude!, longitude: longitude!)
+            self.institutions[row].updateAddress(location: location)
             complete()
         }
     }

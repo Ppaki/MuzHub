@@ -23,11 +23,14 @@ class FirebaseService {
             
             let value = snapshot.value as? NSDictionary
             let name = value?["name"] as? String ?? ""
+            let type = value?["type"] as? String ?? ""
+            
             let fav = value?["favorite"] as? NSDictionary
             let favArray = fav?.allKeys as! Array<String>
+            
             let provider = value?["provider"] as? String ?? ""
             let email = Auth.auth().currentUser?.email
-            self._user = User(name: name, email: email!, uid: uid, provider: provider, favInstitutions: favArray)
+            self._user = User(name: name, email: email!, uid: uid, provider: provider, type: type, favInstitutions: favArray)
         }
     }
     
