@@ -331,7 +331,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MasjidImage" translatesAutoresizingMaskIntoConstraints="NO" id="0dT-wG-msr" customClass="RoundImageView" customModule="Muz_Hub" customModuleProvider="target">
-                                <rect key="frame" x="152" y="80" width="70" height="70"/>
+                                <rect key="frame" x="152" y="50" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
