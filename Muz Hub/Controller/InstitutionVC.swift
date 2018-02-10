@@ -34,14 +34,14 @@ class InstitutionVC: UIViewController {
             
             loadSchedule {
                 self.nameLabel.text = self.institute.name
-                self.infoLabel.text = self.institute.info
-                self.addressLabel.text = "\(self.institute.street) \n\(self.institute.city), \(self.institute.state) \(self.institute.zip)"
+                //self.infoLabel.text = "About US:    \(self.institute.info)"
+                self.addressLabel.text = "\(self.institute.street) | \(self.institute.city), \(self.institute.state) \(self.institute.zip)"
                 
-                self.fajrLabel.text = "Salat al-fajr: \(self.institutionSchedule.schedule["Salat al-fajr"]!)"
-                self.zuhrLabel.text = "Salat al-zuhr: \(self.institutionSchedule.schedule["Salat al-zuhr"]!)"
-                self.asrLabel.text = "Salat al-'asr: \(self.institutionSchedule.schedule["Salat al-'asr"]!)"
-                self.maghribLabel.text = "Salat al-maghrib: \(self.institutionSchedule.schedule["Salat al-maghrib"]!)"
-                self.ishaLabel.text = "Salat al-'isha: \(self.institutionSchedule.schedule["Salat al-'isha"]!)"
+                self.fajrLabel.text = "Fajr: \(self.institutionSchedule.schedule["Salat al-fajr"]!)"
+                self.zuhrLabel.text = "Zuhr: \(self.institutionSchedule.schedule["Salat al-zuhr"]!)"
+                self.asrLabel.text = "Asr: \(self.institutionSchedule.schedule["Salat al-'asr"]!)"
+                self.maghribLabel.text = "Maghrib: \(self.institutionSchedule.schedule["Salat al-maghrib"]!)"
+                self.ishaLabel.text = "Isha: \(self.institutionSchedule.schedule["Salat al-'isha"]!)"
                 
             }
         }
