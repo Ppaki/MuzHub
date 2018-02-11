@@ -1,5 +1,5 @@
 //
-//  DisplayPrayerTimeView.swift
+//  ShadowView.swift
 //  Muz Hub
 //
 //  Created by Aqib Shehri on 2/9/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DisplayPrayerTimeView: UIView {
+class ShadowView: UIView {
 
     
     override func awakeFromNib() {
@@ -19,7 +19,8 @@ class DisplayPrayerTimeView: UIView {
         self.layer.shadowColor = UIColor.black.cgColor
         self.layer.shadowOpacity = 1
         self.layer.shadowOffset = CGSize.zero
-        self.layer.shadowRadius = 10
+        self.layer.shadowRadius = 7
+        
     }
     
     

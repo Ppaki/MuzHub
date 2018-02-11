@@ -77,7 +77,7 @@ class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "institution" {
-            let destinationController: InstitutionVC = (segue.destination as? InstitutionVC)!
+            let destinationController: ViewController = (segue.destination as? ViewController)!
             let indexRow = self.tableView.indexPathForSelectedRow?.row
             destinationController.institute = self.institutions[indexRow!]
         }
