@@ -22,19 +22,10 @@ class LoginVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        if Auth.auth().currentUser != nil {
-            do {
-                try Auth.auth().signOut()
-            } catch let error as NSError {
-                print("error: \(error)")
-            }
-        }
-    }
-
     @IBAction func loginButtonWasPressed(_ sender: UIButton) {
         Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
             if error == nil {
+                print("getting user....")
                 FirebaseService.MS.getUser()
                 showVC = .HomeVC
                 self.delegate?.reloadContainer()

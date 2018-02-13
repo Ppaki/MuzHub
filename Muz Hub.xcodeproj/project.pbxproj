@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A300AD191FBE991B004E6E7D /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A300AD181FBE991B004E6E7D /* Constant.swift */; };
-		A31C62EA1FD516D80014253D /* InstitutionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31C62E91FD516D80014253D /* InstitutionVC.swift */; };
 		A328C4801FAB97A0002B952B /* PostCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A328C47F1FAB97A0002B952B /* PostCollectionCell.swift */; };
 		A328C4821FAB9EDE002B952B /* InstitutionCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A328C4811FAB9EDE002B952B /* InstitutionCollectionCell.swift */; };
 		A32FB2FC1FA6ADC200ABBE05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32FB2FB1FA6ADC200ABBE05 /* AppDelegate.swift */; };
@@ -37,7 +36,7 @@
 		A48D90B3202B930F00E91165 /* InstitutionSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D90B2202B930F00E91165 /* InstitutionSchedule.swift */; };
 		A49D38A7203004710069F57E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A49D38A6203004700069F57E /* Assets.xcassets */; };
 		A49D38A92030127A0069F57E /* FeedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49D38A82030127A0069F57E /* FeedCollectionViewCell.swift */; };
-		A4BFFB43202F905B005C2F3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BFFB42202F905B005C2F3D /* ViewController.swift */; };
+		A4BFFB43202F905B005C2F3D /* InstitutionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BFFB42202F905B005C2F3D /* InstitutionVC.swift */; };
 		EAFC3C39F4EA3BECC02DBEB2 /* Pods_Muz_Hub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C414E16ED574B346901DE7EE /* Pods_Muz_Hub.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,7 +60,6 @@
 /* Begin PBXFileReference section */
 		44307602FDC4FC278B91E5F5 /* Pods-Muz Hub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Muz Hub.release.xcconfig"; path = "Pods/Target Support Files/Pods-Muz Hub/Pods-Muz Hub.release.xcconfig"; sourceTree = "<group>"; };
 		A300AD181FBE991B004E6E7D /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
-		A31C62E91FD516D80014253D /* InstitutionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstitutionVC.swift; sourceTree = "<group>"; };
 		A328C47F1FAB97A0002B952B /* PostCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionCell.swift; sourceTree = "<group>"; };
 		A328C4811FAB9EDE002B952B /* InstitutionCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstitutionCollectionCell.swift; sourceTree = "<group>"; };
 		A32FB2F81FA6ADC200ABBE05 /* Muz Hub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Muz Hub.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,7 +94,7 @@
 		A48D90B2202B930F00E91165 /* InstitutionSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstitutionSchedule.swift; sourceTree = "<group>"; };
 		A49D38A6203004700069F57E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A49D38A82030127A0069F57E /* FeedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCollectionViewCell.swift; sourceTree = "<group>"; };
-		A4BFFB42202F905B005C2F3D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A4BFFB42202F905B005C2F3D /* InstitutionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstitutionVC.swift; sourceTree = "<group>"; };
 		C414E16ED574B346901DE7EE /* Pods_Muz_Hub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Muz_Hub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF496D8DBC09B53C5B3747DE /* Pods-Muz Hub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Muz Hub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Muz Hub/Pods-Muz Hub.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -253,9 +251,8 @@
 				A33777541FB6AC4F0097EE8B /* ContainerVC.swift */,
 				A33A32D31FB948D4003518FF /* ProfileVC.swift */,
 				A34987C71FB951C5001F2A64 /* LoginVC.swift */,
-				A31C62E91FD516D80014253D /* InstitutionVC.swift */,
 				A3A4529C2003225200EF1088 /* MapVC.swift */,
-				A4BFFB42202F905B005C2F3D /* ViewController.swift */,
+				A4BFFB42202F905B005C2F3D /* InstitutionVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -460,10 +457,9 @@
 				A33777581FB6B3800097EE8B /* CenterVCDelegate.swift in Sources */,
 				A408E6F5202E7FB5001ABD87 /* ShadowCollectionViewCell.swift in Sources */,
 				A408E6F3202E76AF001ABD87 /* ShadowLabel.swift in Sources */,
-				A31C62EA1FD516D80014253D /* InstitutionVC.swift in Sources */,
 				A393A03F1FA6E2CE008D597D /* User.swift in Sources */,
 				A300AD191FBE991B004E6E7D /* Constant.swift in Sources */,
-				A4BFFB43202F905B005C2F3D /* ViewController.swift in Sources */,
+				A4BFFB43202F905B005C2F3D /* InstitutionVC.swift in Sources */,
 				A45EE064202E6BC300C19B0C /* RoundImageView.swift in Sources */,
 				A34987C81FB951C5001F2A64 /* LoginVC.swift in Sources */,
 				A45EE062202E5B1300C19B0C /* ShadowView.swift in Sources */,

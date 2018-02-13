@@ -2,47 +2,39 @@
 //  InstitutionVC.swift
 //  Muz Hub
 //
-//  Created by Aqib Shehri on 12/4/17.
-//  Copyright © 2017 Aqib Shehri. All rights reserved.
+//  Created by Aqib Shehri on 2/10/18.
+//  Copyright © 2018 Aqib Shehri. All rights reserved.
 //
 
 import UIKit
 import FirebaseDatabase
-import CoreLocation
 
-class InstitutionVC: UIViewController {
+class InstitutionVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     var institute: Institution!
     var institutionSchedule: InstitutionSchedule!
+    var scheduleName: [String]!
+    var scheduleTime: [String]!
     
+    @IBOutlet weak var collection: UICollectionView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
-    @IBOutlet weak var infoLabel: UILabel!
-    
-    @IBOutlet weak var fajrLabel: UILabel!
-    @IBOutlet weak var zuhrLabel: UILabel!
-    @IBOutlet weak var asrLabel: UILabel!
-    @IBOutlet weak var maghribLabel: UILabel!
-    @IBOutlet weak var ishaLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         
-        if institutionSchedule == nil {
-            
+        // Do any additional setup after loading the view.
+        collection.delegate = self
+        collection.dataSource = self
+        
+        if institute != nil {
             loadSchedule {
                 self.nameLabel.text = self.institute.name
-                //self.infoLabel.text = "About US:    \(self.institute.info)"
                 self.addressLabel.text = "\(self.institute.street) | \(self.institute.city), \(self.institute.state) \(self.institute.zip)"
                 
-                self.fajrLabel.text = "Fajr: \(self.institutionSchedule.schedule["Salat al-fajr"]!)"
-                self.zuhrLabel.text = "Zuhr: \(self.institutionSchedule.schedule["Salat al-zuhr"]!)"
-                self.asrLabel.text = "Asr: \(self.institutionSchedule.schedule["Salat al-'asr"]!)"
-                self.maghribLabel.text = "Maghrib: \(self.institutionSchedule.schedule["Salat al-maghrib"]!)"
-                self.ishaLabel.text = "Isha: \(self.institutionSchedule.schedule["Salat al-'isha"]!)"
-                
+                self.scheduleName = self.institutionSchedule.schedule.allKeys as! [String]
+                self.scheduleTime = self.institutionSchedule.schedule.allValues as! [String]
+                self.collection.reloadData()
             }
         }
     }
@@ -52,8 +44,24 @@ class InstitutionVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func cancelButton(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
+    @IBAction func BackButtonWasPressed(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if institutionSchedule != nil {
+            return institutionSchedule.schedule.count
+        } else {
+            return 0
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "prayer", for: indexPath) as? ShadowCollectionViewCell
+        
+        cell?.configCell(name: scheduleName[indexPath.row], time: scheduleTime[indexPath.row])
+        
+        return cell!
     }
     
     func loadSchedule(complete: @escaping DownloadCompleted) {

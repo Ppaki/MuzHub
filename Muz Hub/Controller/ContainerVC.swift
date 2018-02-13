@@ -33,6 +33,7 @@ class ContainerVC: UIViewController {
     @IBOutlet weak var profileButton: UIButton!
     @IBOutlet weak var homeButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var logoutButton: UIButton!
     
     var centerController: UIViewController!
     var isHidden = false
@@ -50,11 +51,7 @@ class ContainerVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initCenter(screen: showVC)
-        if Auth.auth().currentUser != nil {
-            self.loginButton.isHidden = true
-        } else {
-            self.loginButton.isHidden = false
-        }
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -74,6 +71,18 @@ class ContainerVC: UIViewController {
         showVC = .LoginVC
         initCenter(screen: showVC)
         toggleLeftPanel()
+    }
+    
+    @IBAction func logoutButtonPressed(_ sender: UIButton) {
+        
+        do {
+            try Auth.auth().signOut()
+            showVC = .LoginVC
+            initCenter(screen: showVC)
+            toggleLeftPanel()
+        } catch let error as NSError  {
+            print(error)
+        }
     }
     
     @IBAction func profileButtonPressed(_ sender: UIButton) {
@@ -136,6 +145,13 @@ class ContainerVC: UIViewController {
         addChildViewController(centerController)
         centerController.didMove(toParentViewController: self)
         
+        if Auth.auth().currentUser != nil {
+            self.loginButton.isHidden = true
+            self.logoutButton.isHidden = false
+        } else {
+            self.loginButton.isHidden = false
+            self.logoutButton.isHidden = true
+        }
     }
 }
 
