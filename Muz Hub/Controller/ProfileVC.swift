@@ -41,10 +41,6 @@ class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-    
-        //dont need this anymore
-        //institutions.removeAll()
-        //user = nil
         
     }
 

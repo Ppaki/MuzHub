@@ -31,6 +31,7 @@
 		A3A4529D2003225200EF1088 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A4529C2003225200EF1088 /* MapVC.swift */; };
 		A408E6F3202E76AF001ABD87 /* ShadowLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A408E6F2202E76AF001ABD87 /* ShadowLabel.swift */; };
 		A408E6F5202E7FB5001ABD87 /* ShadowCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A408E6F4202E7FB5001ABD87 /* ShadowCollectionViewCell.swift */; };
+		A445445F203E567400255612 /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A445445E203E567400255612 /* EditProfileVC.swift */; };
 		A45EE062202E5B1300C19B0C /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45EE061202E5B1300C19B0C /* ShadowView.swift */; };
 		A45EE064202E6BC300C19B0C /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45EE063202E6BC300C19B0C /* RoundImageView.swift */; };
 		A48D90B3202B930F00E91165 /* InstitutionSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D90B2202B930F00E91165 /* InstitutionSchedule.swift */; };
@@ -89,6 +90,7 @@
 		A3A4529C2003225200EF1088 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		A408E6F2202E76AF001ABD87 /* ShadowLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowLabel.swift; sourceTree = "<group>"; };
 		A408E6F4202E7FB5001ABD87 /* ShadowCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowCollectionViewCell.swift; sourceTree = "<group>"; };
+		A445445E203E567400255612 /* EditProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
 		A45EE061202E5B1300C19B0C /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		A45EE063202E6BC300C19B0C /* RoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
 		A48D90B2202B930F00E91165 /* InstitutionSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstitutionSchedule.swift; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 				A3550C291FA6C1F8001C71CC /* HomeVC.swift */,
 				A33777541FB6AC4F0097EE8B /* ContainerVC.swift */,
 				A33A32D31FB948D4003518FF /* ProfileVC.swift */,
+				A445445E203E567400255612 /* EditProfileVC.swift */,
 				A34987C71FB951C5001F2A64 /* LoginVC.swift */,
 				A3A4529C2003225200EF1088 /* MapVC.swift */,
 				A4BFFB42202F905B005C2F3D /* InstitutionVC.swift */,
@@ -475,6 +478,7 @@
 				A39B92E21FBE8E6900C5962F /* FIrebaseService.swift in Sources */,
 				A33A32D41FB948D4003518FF /* ProfileVC.swift in Sources */,
 				A49D38A92030127A0069F57E /* FeedCollectionViewCell.swift in Sources */,
+				A445445F203E567400255612 /* EditProfileVC.swift in Sources */,
 				A328C4821FAB9EDE002B952B /* InstitutionCollectionCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
