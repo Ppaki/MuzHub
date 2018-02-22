@@ -48,6 +48,10 @@ class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         delegate?.toggleLeftPanel()
     }
     
+    @IBAction func editButtonWasPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "edit_profile", sender: nil)
+    }
+    
     // MARK: - TableView Stuff
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "institute", for: indexPath)

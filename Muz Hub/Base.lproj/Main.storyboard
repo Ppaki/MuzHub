@@ -206,100 +206,6 @@
             </objects>
             <point key="canvasLocation" x="2420" y="-232.75862068965517"/>
         </scene>
-        <!--Edit ProfileVC-->
-        <scene sceneID="IGs-6u-T3x">
-            <objects>
-                <viewController id="Pr3-ai-PWa" customClass="EditProfileVC" customModule="Muz_Hub" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="lJH-HY-a9v">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash" translatesAutoresizingMaskIntoConstraints="NO" id="rfm-pd-o3M">
-                                <rect key="frame" x="-20" y="38" width="414.33333333333331" height="736"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7NQ-Rh-U0p">
-                                <rect key="frame" x="20" y="64" width="50" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="Qy3-7a-7I7"/>
-                                    <constraint firstAttribute="height" constant="50" id="qMl-aN-tyn"/>
-                                </constraints>
-                                <state key="normal" title="Done"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XaT-Z8-hqM">
-                                <rect key="frame" x="87" y="64" width="200" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="EcX-6A-jXK"/>
-                                    <constraint firstAttribute="width" constant="200" id="zbc-Kl-VjW"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tDR-sH-bPv" customClass="ShadowView" customModule="Muz_Hub" customModuleProvider="target">
-                                <rect key="frame" x="16" y="134" width="343" height="594"/>
-                                <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cK1-gZ-o0m" customClass="RoundedCornerTextField" customModule="Muz_Hub" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="109" width="323" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="confirm email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cZw-Ee-Bhe" customClass="RoundedCornerTextField" customModule="Muz_Hub" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="183" width="323" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="zipcode" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="whz-N8-kVJ" customClass="RoundedCornerTextField" customModule="Muz_Hub" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="259" width="323" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uhL-3t-OXp">
-                                        <rect key="frame" x="10" y="354" width="46" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Clear"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="32U-gx-ggN">
-                                        <rect key="frame" x="287" y="354" width="46" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Save"/>
-                                    </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nj9-da-aTV" customClass="RoundedCornerTextField" customModule="Muz_Hub" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="36" width="323" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="rfm-pd-o3M" firstAttribute="centerY" secondItem="lJH-HY-a9v" secondAttribute="centerY" id="1GG-4o-MxI"/>
-                            <constraint firstItem="LXf-6k-Rf4" firstAttribute="bottom" secondItem="tDR-sH-bPv" secondAttribute="bottom" constant="50" id="7nc-HP-sMG"/>
-                            <constraint firstItem="7NQ-Rh-U0p" firstAttribute="leading" secondItem="LXf-6k-Rf4" secondAttribute="leading" constant="20" id="KYk-G6-KSB"/>
-                            <constraint firstItem="tDR-sH-bPv" firstAttribute="leading" secondItem="LXf-6k-Rf4" secondAttribute="leading" constant="16" id="Nt7-aZ-Xnh"/>
-                            <constraint firstItem="tDR-sH-bPv" firstAttribute="top" secondItem="7NQ-Rh-U0p" secondAttribute="bottom" constant="20" id="aYl-rT-cPU"/>
-                            <constraint firstItem="rfm-pd-o3M" firstAttribute="centerX" secondItem="lJH-HY-a9v" secondAttribute="centerX" id="cQ0-ov-dlo"/>
-                            <constraint firstItem="XaT-Z8-hqM" firstAttribute="top" secondItem="LXf-6k-Rf4" secondAttribute="top" constant="20" id="gba-Ot-DUx"/>
-                            <constraint firstItem="XaT-Z8-hqM" firstAttribute="centerX" secondItem="lJH-HY-a9v" secondAttribute="centerX" id="uO2-Jr-2z4"/>
-                            <constraint firstItem="LXf-6k-Rf4" firstAttribute="trailing" secondItem="tDR-sH-bPv" secondAttribute="trailing" constant="16" id="xBB-9V-4Pi"/>
-                            <constraint firstItem="7NQ-Rh-U0p" firstAttribute="top" secondItem="LXf-6k-Rf4" secondAttribute="top" constant="20" id="xGU-mr-G7E"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="LXf-6k-Rf4"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nef-6b-BV2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1613.5999999999999" y="-926.60098522167493"/>
-        </scene>
         <!--ProfileVC-->
         <scene sceneID="OcY-8Y-pNf">
             <objects>
@@ -381,6 +287,18 @@
                                     <constraint firstItem="M41-iu-myT" firstAttribute="leading" secondItem="kJQ-v3-PNr" secondAttribute="leading" constant="20" id="z29-Dh-IeQ"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8kJ-KG-dDX">
+                                <rect key="frame" x="305" y="64" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="b3t-6H-eJ9"/>
+                                    <constraint firstAttribute="width" constant="50" id="dOH-2K-Fbv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Edit"/>
+                                <connections>
+                                    <action selector="editButtonWasPressed:" destination="Kts-Cv-hRO" eventType="touchUpInside" id="C2V-uI-YG4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -389,9 +307,11 @@
                             <constraint firstItem="j3P-PO-rVp" firstAttribute="centerY" secondItem="VT1-Pq-d8R" secondAttribute="centerY" id="36K-aZ-4vk"/>
                             <constraint firstItem="RpY-0n-tuC" firstAttribute="trailing" secondItem="kJQ-v3-PNr" secondAttribute="trailing" constant="16" id="E9P-ig-AEv"/>
                             <constraint firstItem="rmq-zX-ppe" firstAttribute="top" secondItem="RpY-0n-tuC" secondAttribute="top" constant="20" id="JAG-J1-Isl"/>
+                            <constraint firstItem="RpY-0n-tuC" firstAttribute="trailing" secondItem="8kJ-KG-dDX" secondAttribute="trailing" constant="20" id="JgH-Nd-JSr"/>
                             <constraint firstItem="tCD-8d-KY6" firstAttribute="top" secondItem="RpY-0n-tuC" secondAttribute="top" constant="20" id="LPx-pd-LRp"/>
                             <constraint firstItem="tCD-8d-KY6" firstAttribute="centerX" secondItem="VT1-Pq-d8R" secondAttribute="centerX" id="MdF-eA-lW9"/>
                             <constraint firstItem="kJQ-v3-PNr" firstAttribute="leading" secondItem="RpY-0n-tuC" secondAttribute="leading" constant="16" id="Nh7-qU-mg4"/>
+                            <constraint firstItem="8kJ-KG-dDX" firstAttribute="top" secondItem="RpY-0n-tuC" secondAttribute="top" constant="20" id="dpq-No-k4q"/>
                             <constraint firstItem="j3P-PO-rVp" firstAttribute="centerX" secondItem="VT1-Pq-d8R" secondAttribute="centerX" id="oaZ-So-Fxf"/>
                             <constraint firstItem="RpY-0n-tuC" firstAttribute="bottom" secondItem="kJQ-v3-PNr" secondAttribute="bottom" constant="50" id="ofw-9R-5wt"/>
                         </constraints>

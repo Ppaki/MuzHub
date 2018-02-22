@@ -34,6 +34,10 @@ class FirebaseService {
         }
     }
     
+    func saveUser(user: [String : Any]) {
+        
+    }
+    
     var user: User {
         return _user
     }

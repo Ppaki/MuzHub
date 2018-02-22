@@ -57,5 +57,4 @@ class User {
     var institutions: [Institution] {
         return self._institutions
     }
-    
 }
