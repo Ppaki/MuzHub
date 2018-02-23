@@ -36,7 +36,7 @@ class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             self.tableView.reloadData()
             nameLabel.text = user.name
             emailLabel.text = user.email
-            otherInfoLabel.text = user.provider
+            otherInfoLabel.text = "\(self.user.street) \n\(self.user.city), \(self.user.state) \(self.user.zipcode)"
         }
     }
     

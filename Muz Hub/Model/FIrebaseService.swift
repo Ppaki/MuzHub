@@ -30,12 +30,23 @@ class FirebaseService {
             
             let provider = value?["provider"] as? String ?? ""
             let email = Auth.auth().currentUser?.email
-            self._user = User(name: name, email: email!, uid: uid, provider: provider, type: type, favInstitutions: favArray)
+            
+            let street = value?["street"] as? String ?? ""
+            let city = value?["city"] as? String ?? ""
+            let state = value?["state"] as? String ?? ""
+            let zipcode = value?["zipcode"] as? String ?? ""
+            
+            self._user = User(name: name, email: email!, uid: uid, street: street, city: city, state: state, zipcode: zipcode, provider: provider, type: type, favInstitutions: favArray)
         }
     }
     
-    func saveUser(user: [String : Any]) {
+    func saveUser(userData: [String : Any]) {
         
+        let ref = Database.database().reference()
+        let uid = (Auth.auth().currentUser?.uid)!
+        let childUpdate = ["/user/\(uid)" : userData]
+        
+        ref.updateChildValues(childUpdate)
     }
     
     var user: User {
